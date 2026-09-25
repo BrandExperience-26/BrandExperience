@@ -21,7 +21,7 @@ import { ChangeEvent, useEffect, useState } from "react";
 const SYMPLA_URL = "https://bit.ly/brandexperiencecdl";
 const INSTAGRAM_URL = "https://www.instagram.com/brandexperiencecdl/";
 const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Faculdade+CDL%2C+Rua+Vinte+e+Cinco+de+Mar%C3%A7o%2C+882%2C+Fortaleza%2C+CE";
-const AMAR_AMANDO_URL = "https://amar-amandohtml.tiiny.site/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafdlbd0dm[...]
+const AMAR_AMANDO_URL = "https://amar-amandohtml.tiiny.site/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafdlbd0dmKPwZNzdkrkQlf-XsdiPk0ct6Vltrz-ZeLxyxPUrluyXsqlo0FCxw_aem_DecqavjKeC7_HXAcaqAbvw";
 const CASA_MENINO_JESUS_URL = "https://www.casameninojesus.org.br";
 
 const speakers = [
@@ -196,7 +196,7 @@ export default function Home() {
             </div>
             <div className="manifesto-grid__copy reveal reveal--delay-1">
               <p className="lead-copy">É o que ela faz as pessoas sentirem, lembrarem e escolherem.</p>
-              <p>O Brand Experience aproxima o conhecimento acadêmico da prática do mercado em uma conversa sobre posicionamento, comunicação, varejo, experiência do cliente e construção d[...]
+              <p>O Brand Experience aproxima o conhecimento acadêmico da prática do mercado em uma conversa sobre posicionamento, comunicação, varejo, experiência do cliente e construção de valor.</p>
               <p>Um encontro para estudantes, profissionais, empreendedores e empresas trocarem repertório, histórias reais e novas possibilidades de conexão.</p>
             </div>
             <div className="manifesto-grid__principles">

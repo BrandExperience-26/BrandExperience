@@ -21,6 +21,8 @@ import { ChangeEvent, useEffect, useState } from "react";
 const SYMPLA_URL = "https://bit.ly/brandexperiencecdl";
 const INSTAGRAM_URL = "https://www.instagram.com/brandexperiencecdl/";
 const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Faculdade+CDL%2C+Rua+Vinte+e+Cinco+de+Mar%C3%A7o%2C+882%2C+Fortaleza%2C+CE";
+const AMAR_AMANDO_URL = "https://amar-amandohtml.tiiny.site/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafdlbd0dmKPwZNzdkrkQlf-XsdiPk0ct6Vltrz-ZeLxyxPUrluyXsqlo0FCxw_aem_DecqavjKeC7_HXAcaqAbvw";
+const CASA_MENINO_JESUS_URL = "https://www.casameninojesus.org.br";
 
 const speakers = [
   {
@@ -116,7 +118,10 @@ export default function Home() {
   const [editorOpen, setEditorOpen] = useState(() => typeof window !== "undefined" && new URLSearchParams(window.location.search).get("editar") === "1");
   const [assets, setAssets] = useState<MediaAssets>(() => {
     if (typeof window === "undefined") return defaultAssets;
-    try { return { ...defaultAssets, ...JSON.parse(window.localStorage.getItem("brand-experience-assets") || "{}") }; } catch { return defaultAssets; }
+    try {
+      const saved = JSON.parse(window.localStorage.getItem("brand-experience-assets") || "{}");
+      return { ...defaultAssets, ...saved, logo: "" };
+    } catch { return defaultAssets; }
   });
 
   useEffect(() => {
@@ -255,7 +260,7 @@ export default function Home() {
         </section>
 
         <section className="section section--beneficiaries">
-          <div className="container beneficiaries-grid"><div className="beneficiaries-intro reveal"><SectionKicker>Uma experiência que também cuida</SectionKicker><h2>Conheça quem recebe esse gesto.</h2><p>A entrega de alimentos no credenciamento fortalece duas iniciativas que transformam acolhimento em ação no Ceará.</p></div><div className="beneficiary-cards"><article className="beneficiary-card reveal"><span className="beneficiary-card__number">01</span><h3>Amar Amando</h3><p>Fundado em 2020, o Amar Amando surgiu de um desejo genuíno de transformar o entorno com ações concretas e cheias de afeto. Nascemos de conversas, de mãos estendidas, de olhares que não desviam de quem precisa.</p><p>Ao longo desses anos, construímos pontes entre pessoas, famílias e comunidades — acreditando que o acolhimento é o primeiro passo para qualquer transformação real.</p></article><article className="beneficiary-card reveal reveal--delay-1"><span className="beneficiary-card__number">02</span><h3>Casa do Menino Jesus</h3><p>A ONG acolhe familiares de crianças com diversas patologias que vêm a Fortaleza em busca de tratamento e não têm condições de arcar com os custos de estadia e alimentação.</p><p>É uma rede de apoio para que o cuidado com a saúde possa acontecer com mais dignidade, presença e acolhimento.</p></article></div></div>
+          <div className="container beneficiaries-grid"><div className="beneficiaries-intro reveal"><SectionKicker>Uma experiência que também cuida</SectionKicker><h2>Conheça quem recebe esse gesto.</h2><p>A entrega de alimentos no credenciamento fortalece duas iniciativas que transformam acolhimento em ação no Ceará.</p></div><div className="beneficiary-cards"><article className="beneficiary-card reveal"><span className="beneficiary-card__number">01</span><h3>Amar Amando</h3><p>Fundado em 2020, o Amar Amando surgiu de um desejo genuíno de transformar o entorno com ações concretas e cheias de afeto. Nascemos de conversas, de mãos estendidas, de olhares que não desviam de quem precisa.</p><p>Ao longo desses anos, construímos pontes entre pessoas, famílias e comunidades — acreditando que o acolhimento é o primeiro passo para qualquer transformação real.</p><a className="beneficiary-card__link" href={AMAR_AMANDO_URL} target="_blank" rel="noreferrer">Conheça o projeto <MoveUpRight size={15} /></a></article><article className="beneficiary-card reveal reveal--delay-1"><span className="beneficiary-card__number">02</span><h3>Casa do Menino Jesus</h3><p>A ONG acolhe familiares de crianças com diversas patologias que vêm a Fortaleza em busca de tratamento e não têm condições de arcar com os custos de estadia e alimentação.</p><p>É uma rede de apoio para que o cuidado com a saúde possa acontecer com mais dignidade, presença e acolhimento.</p><a className="beneficiary-card__link" href={CASA_MENINO_JESUS_URL} target="_blank" rel="noreferrer">Conheça o projeto <MoveUpRight size={15} /></a></article></div></div>
         </section>
       </main>
 

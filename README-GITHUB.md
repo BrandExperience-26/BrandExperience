@@ -102,11 +102,3 @@ vite.config.ts                  Configuração do build e caminho-base
 O editor visual que existia na versão Manus salva arquivos no navegador via `localStorage`. Ele não altera os arquivos do GitHub. Para trocar a imagem de forma permanente para todos os visitantes, substitua os arquivos dentro de `public/images` e faça um novo commit. O GitHub Actions publicará a nova versão automaticamente.
 
 Caminhos `file:///C:/Users/...` não devem ser usados no código publicado: eles apontam somente para o computador local e quebram quando o site é aberto por outras pessoas.
-
-
-## Imagens atualizadas
-- `client/public/images/albanir.jpg` — foto de Albanir Américo
-- `client/public/images/alexandre.jpg` — foto de Alexandre Magno
-- `client/public/images/natalia.jpg` — foto de Natália Lima
-- `client/public/images/logo-fundo-claro.png` — logo para ambientes claros
-- `client/public/images/logo-fundo-escuro.png` — logo para ambientes escuros

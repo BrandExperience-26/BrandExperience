@@ -251,7 +251,15 @@ h2 { margin: 0; font-family: "Space Grotesk", sans-serif; font-size: clamp(42px,
 .footer-social { display: grid; align-content: start; gap: 14px; justify-self: end; font-size: 11px; }
 .footer-social > span { color: rgba(255,255,255,.38); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; }
 .footer-social a { display: inline-flex; align-items: center; gap: 9px; }
-.footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-top: 18px; padding-bottom: 20px; border-top: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.36); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+.footer-credits { display: grid; grid-template-columns: .8fr 1.2fr; gap: 28px 60px; padding-top: 28px; padding-bottom: 34px; border-top: 1px solid rgba(255,255,255,.1); border-bottom: 1px solid rgba(255,255,255,.1); }
+.footer-credit { display: flex; align-items: center; gap: 24px; min-width: 0; }
+.footer-credit > span { flex: 0 0 auto; color: rgba(255,255,255,.38); font-size: 9px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+.footer-credit__faculdade { width: 170px; height: auto; max-height: 40px; object-fit: contain; object-position: left center; }
+.footer-partner-logos { display: flex; align-items: center; gap: 18px; min-width: 0; }
+.footer-partner-logos b { color: rgba(255,255,255,.35); font-size: 17px; font-weight: 300; }
+.footer-credit__evelyn { width: 142px; height: 56px; object-fit: contain; }
+.footer-credit__fonte { width: 158px; height: 56px; object-fit: contain; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-top: 18px; padding-bottom: 20px; color: rgba(255,255,255,.36); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
 .footer-bottom a { display: inline-flex; align-items: center; gap: 8px; color: var(--lilac); }
 
 .reveal { animation: reveal-in .75s var(--ease-out) both; }
@@ -328,11 +336,14 @@ h2 { margin: 0; font-family: "Space Grotesk", sans-serif; font-size: clamp(42px,
   .register__inner p { font-size: 14px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 42px 25px; padding-top: 48px; }
   .footer-social { grid-column: 1 / -1; justify-self: start; }
+  .footer-credits { grid-template-columns: 1fr; gap: 24px; }
+  .footer-credit--partners { align-items: flex-start; }
+  .footer-partner-logos { flex-wrap: wrap; }
   .footer-bottom { align-items: flex-start; flex-direction: column; gap: 12px; }
 }
 
 
-.brand-custom-logo { display: block; width: auto; max-width: 170px; max-height: 44px; object-fit: contain; }
+.brand-custom-logo { display: block; width: auto; max-width: 150px; max-height: 42px; object-fit: contain; }
 .nav-editor { padding: 8px 0; color: inherit; background: transparent; border: 0; opacity: .62; font: inherit; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; transition: opacity .2s ease; }
 .nav-editor:hover { opacity: 1; }
 .media-editor-backdrop { position: fixed; z-index: 100; inset: 0; display: flex; justify-content: flex-end; background: rgba(19, 7, 30, .58); backdrop-filter: blur(8px); }
@@ -372,7 +383,7 @@ h2 { margin: 0; font-family: "Space Grotesk", sans-serif; font-size: clamp(42px,
 
 @media (max-width: 900px) {
   .nav-editor { width: 100%; padding: 15px 0; text-align: left; border-bottom: 1px solid var(--line); }
-  .brand-custom-logo { max-width: 140px; max-height: 38px; }
+  .brand-custom-logo { max-width: 125px; max-height: 36px; }
   .beneficiaries-grid { grid-template-columns: 1fr; gap: 45px; }
 }
 @media (max-width: 620px) {

@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { ChangeEvent, useEffect, useState } from "react";
 
-const SYMPLA_URL = "https://bit.ly/brandexperiencecdl";
+const SYMPLA_URL = "https://www.sympla.com.br/evento/brand-experience-cdl/3576617";
 const INSTAGRAM_URL = "https://www.instagram.com/brandexperiencecdl/";
 const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Faculdade+CDL%2C+Rua+Vinte+e+Cinco+de+Mar%C3%A7o%2C+780%2C+Fortaleza%2C+CE";
 const AMAR_AMANDO_URL = "https://amar-amando.netlify.app/#quem-somos";
@@ -72,10 +72,10 @@ const audience = [
 ];
 
 const experiences = [
-  { number: "01", title: "Espaço instagramável", text: "Um cenário temático para transformar a identidade do evento em registros e compartilhamentos espontâneos." },
-  { number: "02", title: "Mural das marcas", text: "Um painel interativo que reúne organizadores, apoiadores, patrocinadores e instituições parceiras." },
-  { number: "03", title: "Credenciamento", text: "Uma recepção organizada e visualmente marcante para começar a experiência do jeito certo." },
-  { number: "04", title: "Mesa-redonda", text: "O momento de aproximar os palestrantes do público e colocar as ideias em movimento." },
+  { title: "Espaço instagramável", text: "Um cenário temático para transformar a identidade do evento em registros e compartilhamentos espontâneos." },
+  { title: "Mural das marcas", text: "Um painel interativo que reúne organizadores, apoiadores, patrocinadores e instituições parceiras." },
+  { title: "Credenciamento", text: "Uma recepção organizada e visualmente marcante para começar a experiência do jeito certo." },
+  { title: "Mesa-redonda", text: "O momento de aproximar os palestrantes do público e colocar as ideias em movimento." },
 ];
 
 type MediaAssets = {
@@ -178,7 +178,7 @@ export default function Home() {
               <span><MapPin size={16} /> Auditório da Faculdade CDL</span>
             </div>
           </div>
-          <div className="hero__side-note"><span>01</span><span>Experiência<br />em movimento</span></div>
+          <div className="hero__side-note"><span>Experiência<br />em movimento</span></div>
           <div className="hero__scroll"><span>Scroll para explorar</span><span className="hero__scroll-line" /></div>
         </section>
 
@@ -212,7 +212,7 @@ export default function Home() {
             <div className="speaker-grid">
               {speakers.map((speaker, index) => (
                 <article className="speaker-card reveal" key={speaker.name} style={{ animationDelay: `${index * 100}ms` }}>
-                  <div className="speaker-card__image"><img src={assets[index === 0 ? "albanir" : index === 1 ? "alexandre" : "natalia"] || speaker.image} alt={`Retrato editorial de referência para ${speaker.name}`} /><span className="speaker-card__number">0{index + 1}</span><span className="speaker-card__tag">{speaker.tag}</span></div>
+                  <div className="speaker-card__image"><img src={assets[index === 0 ? "albanir" : index === 1 ? "alexandre" : "natalia"] || speaker.image} alt={`Retrato editorial de referência para ${speaker.name}`} /><span className="speaker-card__tag">{speaker.tag}</span></div>
                   <div className="speaker-card__body"><p className="speaker-card__role">{speaker.role}</p><h3>{speaker.name}</h3><p className="speaker-card__bio">{speaker.bio}</p><div className="speaker-card__topic"><span>Tema central</span><strong>{speaker.topic}</strong></div></div>
                 </article>
               ))}
@@ -234,7 +234,7 @@ export default function Home() {
             <div className="section-heading reveal"><SectionKicker>Além do palco</SectionKicker><h2>A experiência acontece<br /><i>em todos os pontos de contato.</i></h2></div>
             <div className="experience-layout">
               <div className="experience-visual reveal"><img src={assets.board} alt="Painel visual com aplicações da marca Brand Experience" /><div className="experience-visual__overlay"><span>BRAND EXPERIENCE</span><span>2026</span></div></div>
-              <div className="experience-list">{experiences.map((item, index) => <article className="experience-item reveal" key={item.number} style={{ animationDelay: `${index * 70}ms` }}><span>{item.number}</span><div><h3>{item.title}</h3><p>{item.text}</p></div><ChevronRight size={18} /></article>)}</div>
+              <div className="experience-list">{experiences.map((item, index) => <article className="experience-item reveal" key={item.title} style={{ animationDelay: `${index * 70}ms` }}><div><h3>{item.title}</h3><p>{item.text}</p></div><ChevronRight size={18} /></article>)}</div>
             </div>
           </div>
         </section>
@@ -245,7 +245,7 @@ export default function Home() {
         </section>
 
         <section className="section section--why">
-          <div className="container"><div className="section-heading section-heading--center reveal"><SectionKicker>Por que participar?</SectionKicker><h2>O que você leva<br /><i>da experiência.</i></h2></div><div className="why-grid">{[{tag:"01", title:"Aprendizado prático", text:"Cases, estratégias e decisões reais do mercado."}, {tag:"02", title:"Visibilidade", text:"Uma oportunidade de conhecer marcas e pessoas que estão em movimento."}, {tag:"03", title:"Conexão", text:"Relacione-se com estudantes, gestores e líderes de comunicação."}, {tag:"04", title:"Inspiração", text:"Veja como a experiência se transforma em vantagem competitiva."}].map((item, index) => <article className="why-card reveal" key={item.title} style={{ animationDelay: `${index * 80}ms` }}><span>{item.tag}</span><h3>{item.title}</h3><p>{item.text}</p><ArrowRight size={18} /></article>)}</div></div>
+          <div className="container"><div className="section-heading section-heading--center reveal"><SectionKicker>Por que participar?</SectionKicker><h2>O que você leva<br /><i>da experiência.</i></h2></div><div className="why-grid">[{title:"Aprendizado prático", text:"Cases, estratégias e decisões reais do mercado."}, {title:"Visibilidade", text:"Uma oportunidade de conhecer marcas e pessoas que estão em movimento."}, {title:"Conexão", text:"Relacione-se com estudantes, gestores e líderes de comunicação."}, {title:"Inspiração", text:"Veja como a experiência se transforma em vantagem competitiva."}].map((item, index) => <article className="why-card reveal" key={item.title} style={{ animationDelay: `${index * 80}ms` }}><h3>{item.title}</h3><p>{item.text}</p><ArrowRight size={18} /></article>)}</div></div>
         </section>
 
         <section id="local" className="section section--location">
@@ -258,7 +258,7 @@ export default function Home() {
         </section>
 
         <section className="section section--beneficiaries">
-          <div className="container beneficiaries-grid"><div className="beneficiaries-intro reveal"><SectionKicker>Uma experiência que também cuida</SectionKicker><h2>Conheça quem recebe esse apoio.</h2><p>Além da programação, o evento reforça sua presença em ações que geram sentido e impacto.</p></div><div className="beneficiary-cards">{[{number:"01", title:"Casa Menino Jesus", text:"Unidade de apoio social com atuação voltada ao cuidado, acolhimento e fortalecimento de comunidades.", link:"casameninojesus.org.br", href: CASA_MENINO_JESUS_URL}, {number:"02", title:"Amar Amando", text:"Iniciativa que articula experiências significativas para ampliar a cultura de cuidado e pertencimento.", link:"amar-amando", href: AMAR_AMANDO_URL}].map((card, index) => <article className="beneficiary-card reveal" key={card.title} style={{ animationDelay: `${index * 80}ms` }}><span className="beneficiary-card__number">{card.number}</span><h3>{card.title}</h3><p>{card.text}</p><a className="beneficiary-card__link" href={card.href} target="_blank" rel="noreferrer">{card.link} <ArrowRight size={13} /></a></article>)}</div></div>
+          <div className="container beneficiaries-grid"><div className="beneficiaries-intro reveal"><SectionKicker>Uma experiência que também cuida</SectionKicker><h2>Conheça quem recebe esse apoio.</h2><p>Além da programação, o evento reforça sua presença em ações que geram sentido e impacto.</p></div><div className="beneficiary-cards">{[{number:"01", title:"Casa Menino Jesus", text:"Unidade de apoio social com atuação voltada ao cuidado, acolhimento e fortalecimento de comunidades.", link:"casameninojesus.org.br", href: CASA_MENINO_JESUS_URL}, {number:"02", title:"Amar Amando", text:"Iniciativa que articula experiências significativas para ampliar a cultura de cuidado e pertencimento.", link:"amar-amando", href: AMAR_AMANDO_URL}].map((card, index) => <article className="beneficiary-card reveal" key={card.title} style={{ animationDelay: `${index * 80}ms` }}><h3>{card.title}</h3><p>{card.text}</p><a className="beneficiary-card__link" href={card.href} target="_blank" rel="noreferrer">{card.link} <ArrowRight size={13} /></a></article>)}</div></div>
         </section>
       </main>
 

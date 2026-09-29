@@ -60,15 +60,15 @@ const schedule = [
 ];
 
 const audience = [
-  "Estudantes",
-  "Profissionais de marketing",
-  "Profissionais de comunicação",
-  "Empreendedores",
-  "Empresários",
   "Gestores",
+  "Empresários",
+  "Profissionais de comunicação",
+  "Profissionais de marketing",
+  "Empreendedores",
   "Profissionais de vendas",
-  "Apaixonados por branding",
+  "Estudantes",
   "Interessados em experiência do consumidor",
+  "Apaixonados por branding",
 ];
 
 const experiences = [
@@ -254,7 +254,7 @@ export default function Home() {
 
         <section id="inscricao" className="section section--register">
           <CircleField className="register__circles" />
-          <div className="container register__inner reveal"><SectionKicker light>Inscrições abertas</SectionKicker><h2>Sua experiência<br /><i>começa aqui.</i></h2><p>Participe de uma manhã pensada para inspirar, ampliar redes e conectar conhecimento com ação.</p><a className="button button--primary" href={SYMPLA_URL} target="_blank" rel="noreferrer">Inscreva-se agora <MoveUpRight size={17} /></a><div className="donation-note"><Ticket size={14} /><span><strong>Parceiro:</strong> casameninojesus.org.br e outras iniciativas do evento.</span></div></div>
+          <div className="container register__inner reveal"><SectionKicker light>Inscrições abertas</SectionKicker><h2>Sua experiência<br /><i>começa aqui.</i></h2><p>Participe de uma manhã pensada para inspirar, ampliar redes e conectar conhecimento com ação.</p><a className="button button--primary" href={SYMPLA_URL} target="_blank" rel="noreferrer">Inscreva-se agora <MoveUpRight size={17} /></a><div className="donation-note"><Ticket size={14} /><span><strong>Entrada:</strong> é necessário levar 1 kg de alimento para participar do evento. <strong>Parceiro:</strong> casameninojesus.org.br e outras iniciativas do evento.</span></div></div>
         </section>
 
         <section className="section section--beneficiaries">
@@ -262,7 +262,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer"><div className="container footer-top"><div><BrandMark logo={assets.logo} light /><p>Marcas que se constroem<br />na experiência.</p></div><div className="footer-links"><a href="#evento">O evento</a><a href="#palestrantes">Palestrantes</a><a href="#programacao">Programação</a><a href="#local">Local</a></div><div className="footer-social"><span>Redes</span><a href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><Instagram size={14} /> @brandexperiencecdl</a></div></div><div className="container footer-credits"><div className="footer-credit"><span>Organiza</span><img className="footer-credit__faculdade" src="/images/faculdade-cdl-fundo-escuro.png" alt="Faculdade CDL" /></div><div className="footer-credit footer-credit--partners"><span>Parceiros</span><div className="footer-partner-logos"><b>Brand Experience</b><img className="footer-credit__evelyn" src="/images/evelyn-g-fundo-escuro-transparente.png" alt="Evelyn G" /><img className="footer-credit__fonte" src="/images/fonte-agencia-fundo-escuro-transparente.png" alt="Fonte Agência" /></div></div></div><div className="container footer-bottom"><span>© 2026 Brand Experience</span><a href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><Instagram size={13} /> @brandexperiencecdl</a></div></footer>
+      <footer className="site-footer"><div className="container footer-top"><div><BrandMark logo={assets.logo} light /><p>Marcas que se constroem<br />na experiência.</p></div><div className="footer-links"><a href="#evento">O evento</a><a href="#palestrantes">Palestrantes</a><a href="#programacao">Programação</a><a href="#local">Local</a></div><div className="footer-social"><span>Redes</span><a href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><Instagram size={14} /> @brandexperiencecdl</a></div></div><div className="container footer-credits"><div className="footer-credit"><span>Realização</span><img className="footer-credit__faculdade" src="/images/faculdade-cdl-fundo-escuro.png" alt="Faculdade CDL" /></div><div className="footer-credit footer-credit--partners"><span>Parceiros</span><div className="footer-partner-logos"><b>Brand Experience</b><img className="footer-credit__evelyn" src="/images/evelyn-g-fundo-escuro-transparente.png" alt="Evelyn G" /><img className="footer-credit__fonte" src="/images/fonte-agencia-fundo-escuro-transparente.png" alt="Fonte Agência" /></div></div></div><div className="container footer-bottom"><span>© 2026 Brand Experience</span><a href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><Instagram size={13} /> @brandexperiencecdl</a></div></footer>
 
       {editorOpen && <div className="media-editor-backdrop" role="presentation" onClick={() => setEditorOpen(false)}><aside className="media-editor" role="dialog" aria-modal="true" aria-labelledby="media-editor-title" onClick={(event) => event.stopPropagation()}><div className="media-editor__head"><div><div className="section-kicker"><span />Mídia</div><h2 id="media-editor-title">Customizar marca</h2></div><button type="button" aria-label="Fechar editor" onClick={() => setEditorOpen(false)}><X size={18} /></button></div><p className="media-editor__intro">Ajuste a identidade visual do evento para o cabeçalho e rodapé do site.</p><div className="media-editor__fields"><label className="media-upload"><input type="file" accept="image/*" onChange={handleUpload("logo")} /><span className="media-upload__preview">{assets.logo ? <img src={assets.logo} alt="Preview da logo" /> : <span>BE</span>}</span><span className="media-upload__copy"><strong>Logomarca</strong><small>PNG, JPG ou SVG</small><em>Atualizar</em></span></label><label className="media-upload"><input type="file" accept="image/*" onChange={handleUpload("board")} /><span className="media-upload__preview">{assets.board ? <img src={assets.board} alt="Preview do painel" /> : <span>PAINEL</span>}</span><span className="media-upload__copy"><strong>Painel visual</strong><small>Imagem principal da experiência</small><em>Atualizar</em></span></label></div><div className="media-editor__foot"><button className="media-reset" type="button" onClick={resetAssets}>Restaurar padrão</button><button className="button button--dark" type="button" onClick={() => setEditorOpen(false)}>Concluir</button></div></aside></div>}
     </div>

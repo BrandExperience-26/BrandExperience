@@ -11,7 +11,6 @@ import {
   Menu,
   MoveUpRight,
   Play,
-  Sparkles,
   Ticket,
   Users,
   X,
@@ -218,7 +217,6 @@ export default function Home() {
                 </article>
               ))}
             </div>
-            <p className="speaker-note"><Sparkles size={15} /> Fotos oficiais dos palestrantes serão atualizadas pela organização.</p>
           </div>
         </section>
 

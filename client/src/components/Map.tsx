@@ -14,11 +14,11 @@ interface MapViewProps {
  */
 export function MapView({ className }: MapViewProps) {
   const src =
-    "https://www.openstreetmap.org/export/embed.html?bbox=-38.5367%2C-3.7375%2C-38.5167%2C-3.7175&layer=mapnik&marker=-3.7275%2C-38.5267";
+    "https://www.openstreetmap.org/export/embed.html?bbox=-38.53323%2C-3.74069%2C-38.51323%2C-3.72069&layer=mapnik&marker=-3.73069%2C-38.52323";
 
   return (
     <iframe
-      title="Mapa da Faculdade CDL — Centro, Fortaleza"
+      title="Mapa da Faculdade CDL — Rua 25 de Março, 780, Centro, Fortaleza"
       src={src}
       className={cn("w-full h-[500px] border-0", className)}
       loading="lazy"

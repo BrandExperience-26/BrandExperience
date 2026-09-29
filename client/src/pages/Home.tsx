@@ -19,7 +19,7 @@ import { ChangeEvent, useEffect, useState } from "react";
 
 const SYMPLA_URL = "https://bit.ly/brandexperiencecdl";
 const INSTAGRAM_URL = "https://www.instagram.com/brandexperiencecdl/";
-const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Faculdade+CDL%2C+Rua+Vinte+e+Cinco+de+Mar%C3%A7o%2C+882%2C+Fortaleza%2C+CE";
+const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Faculdade+CDL%2C+Rua+Vinte+e+Cinco+de+Mar%C3%A7o%2C+780%2C+Fortaleza%2C+CE";
 const AMAR_AMANDO_URL = "https://amar-amando.netlify.app/#quem-somos";
 const CASA_MENINO_JESUS_URL = "https://www.casameninojesus.org.br";
 
@@ -249,7 +249,7 @@ export default function Home() {
         </section>
 
         <section id="local" className="section section--location">
-          <div className="container location-grid"><div className="location-copy reveal"><SectionKicker>Onde acontece</SectionKicker><h2>Auditório da<br /><i>Faculdade CDL.</i></h2><p className="location-address"><MapPin size={18} /> Rua Vinte e Cinco de Março, 882 — Centro, Fortaleza/CE</p><div className="location-detail"><span>Transporte</span><span>Fácil acesso</span><span>Estacionamento</span></div></div><div className="map-frame reveal reveal--delay-1"><MapView /><div className="map-frame__label"><span className="map-pin-dot" /><div><strong>Faculdade CDL</strong><small>Auditório principal</small></div></div></div></div>
+          <div className="container location-grid"><div className="location-copy reveal"><SectionKicker>Onde acontece</SectionKicker><h2>Auditório da<br /><i>Faculdade CDL.</i></h2><p className="location-address"><MapPin size={18} /> Rua Vinte e Cinco de Março, 780 — Centro, Fortaleza/CE</p><div className="location-detail"><span>Transporte</span><span>Fácil acesso</span><span>Estacionamento</span></div></div><div className="map-frame reveal reveal--delay-1"><MapView /><div className="map-frame__label"><span className="map-pin-dot" /><div><strong>Faculdade CDL</strong><small>Auditório principal</small></div></div></div></div>
         </section>
 
         <section id="inscricao" className="section section--register">

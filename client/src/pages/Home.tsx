@@ -25,37 +25,39 @@ const CASA_MENINO_JESUS_URL = "https://www.casameninojesus.org.br";
 
 const speakers = [
   {
-    name: "Albanir Américo",
-    role: "Gerente de Marketing — Centro Fashion Fortaleza",
-    image: "/images/albanir.jpg",
-    tag: "Varejo & força de mercado",
-    bio: "Profissional com 21 anos de experiência em marketing, branding e crescimento de negócios. Foi eleito Melhor Profissional de Marketing em 2017 pelo GP Verdes Mares.",
-    topic: "Branding, posicionamento e força de mercado no varejo.",
-  },
-  {
-    name: "Alexandre Magno",
-    role: "CEO e Fundador — DLT",
-    image: "/images/alexandre.jpg",
-    tag: "Construção de marca",
-    bio: "Empreendedor cearense, está há mais de 20 anos à frente da DLT. A empresa evoluiu de um investimento inicial de R$ 100 para uma marca de moda masculina com presença nacional.",
-    topic: "Por trás da marca: experiências, decisões e aprendizados na construção da DLT.",
-  },
-  {
     name: "Natália Lima",
     role: "Gerente de Marketing e Comunicação — Hotel Gran Marquise",
     image: "/images/natalia.jpg",
+    asset: "natalia" as const,
     tag: "Hospitalidade & experiência",
     bio: "Profissional com 20 anos de atuação na liderança de estratégias de marca, relacionamento com a imprensa e experiências gastronômicas. Possui MBA em Marketing pela UNIFOR.",
-    topic: "Hospitalidade e experiência do cliente.",
+    topic: "Como a experiência do cliente pode fortalecer marcas e criar conexões que permanecem.",
+  },
+  {
+    name: "Yta de Castro",
+    role: "Head de Marketing — Grupo Turatti",
+    image: "/images/yta.jpg",
+    asset: "yta" as const,
+    tag: "Marketing & branding",
+    bio: "Jornalista e fotógrafa de formação, pós-graduada em Administração de Marca e Marketing Digital, tem mais de 15 anos de experiência em comunicação, marketing e branding. Estruturou áreas de marketing, liderou rebrands e lançamentos nos setores de gastronomia, entretenimento e cervejaria. Também atua como consultora.",
+    topic: "Palestra conjunta com Felipe Costa Rodrigues sobre estratégia, posicionamento e experiência de marca.",
+  },
+  {
+    name: "Felipe Costa Rodrigues",
+    role: "Sommelier de cervejas e técnico cervejeiro — Grupo Turatti",
+    image: "/images/felipe.jpg",
+    asset: "felipe" as const,
+    tag: "Cervejaria & experiência",
+    bio: "Sommelier de cervejas, especialista em análise sensorial e off-flavor, juiz certificado, técnico cervejeiro e barista. Atua em diferentes áreas das cervejarias Turatti e 5 Elementos, incluindo análise sensorial e treinamento de equipes e pontos de venda.",
+    topic: "Palestra conjunta com Yta de Castro sobre estratégia, posicionamento e experiência de marca.",
   },
 ];
 
 const schedule = [
   ["08h00", "Abertura oficial", "Boas-vindas e início da manhã de experiências."],
-  ["08h30", "Palestra — Albanir Américo", "Branding, posicionamento e força de mercado no varejo."],
-  ["09h10", "Palestra — Alexandre Magno", "Por trás da marca: experiências, decisões e aprendizados na construção da DLT."],
-  ["09h50", "Palestra — Natália Lima", "Hospitalidade e experiência do cliente."],
-  ["10h40", "Mesa-redonda + perguntas", "Uma conversa com os três palestrantes sobre branding, posicionamento, experiência e geração de valor."],
+  ["08h30", "Palestra — Natália Lima", "Como a experiência do cliente pode fortalecer marcas e criar conexões que permanecem."],
+  ["09h10", "Palestra conjunta — Yta de Castro e Felipe Costa Rodrigues", "Marketing, posicionamento e experiência de marca no Grupo Turatti."],
+  ["10h10", "Mesa-redonda + perguntas", "Uma conversa com os palestrantes sobre branding, posicionamento, experiência e geração de valor."],
   ["11h00", "Encerramento + foto oficial", "Agradecimentos e orientações sobre os certificados digitais."],
 ];
 
@@ -80,16 +82,16 @@ const experiences = [
 
 type MediaAssets = {
   logo: string;
-  albanir: string;
-  alexandre: string;
+  yta: string;
+  felipe: string;
   natalia: string;
   board: string;
 };
 
 const defaultAssets: MediaAssets = {
   logo: "/images/logo-fundo-escuro.png",
-  albanir: "/images/albanir.jpg",
-  alexandre: "/images/alexandre.jpg",
+  yta: "/images/yta.jpg",
+  felipe: "/images/felipe.jpg",
   natalia: "/images/natalia.jpg",
   board: "/images/painel-aplicacoes.png",
 };
@@ -212,7 +214,7 @@ export default function Home() {
             <div className="speaker-grid">
               {speakers.map((speaker, index) => (
                 <article className="speaker-card reveal" key={speaker.name} style={{ animationDelay: `${index * 100}ms` }}>
-                  <div className="speaker-card__image"><img src={assets[index === 0 ? "albanir" : index === 1 ? "alexandre" : "natalia"] || speaker.image} alt={`Retrato editorial de referência para ${speaker.name}`} /><span className="speaker-card__tag">{speaker.tag}</span></div>
+                  <div className="speaker-card__image"><img src={assets[speaker.asset] || speaker.image} alt={`Foto de ${speaker.name}`} /><span className="speaker-card__tag">{speaker.tag}</span></div>
                   <div className="speaker-card__body"><p className="speaker-card__role">{speaker.role}</p><h3>{speaker.name}</h3><p className="speaker-card__bio">{speaker.bio}</p><div className="speaker-card__topic"><span>Tema central</span><strong>{speaker.topic}</strong></div></div>
                 </article>
               ))}

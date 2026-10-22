@@ -36,12 +36,22 @@ const speakers = [
   {
     name: "Yta de Castro",
     role: "Head de Marketing — Grupo Turatti",
-    image: "/images/Yta.jpg",
+    image: "/images/yta.jpg",
     asset: "yta" as const,
     tag: "Marketing & branding",
     bio: "Jornalista e fotógrafa de formação, pós-graduada em Administração de Marca e Marketing Digital, tem mais de 15 anos de experiência em comunicação, marketing e branding. Estruturou áreas de marketing, liderou rebrands e lançamentos nos setores de gastronomia, entretenimento e cervejaria. Também atua como consultora.",
     topic: "Palestra conjunta com Felipe Costa Rodrigues sobre estratégia, posicionamento e experiência de marca.",
   },
+  {
+    name: "Felipe Costa Rodrigues",
+    role: "Sommelier de cervejas e técnico cervejeiro — Grupo Turatti",
+    image: "/images/felipe.jpg",
+    asset: "felipe" as const,
+    tag: "Cervejaria & experiência",
+    bio: "Sommelier de cervejas, especialista em análise sensorial e off-flavor, juiz certificado, técnico cervejeiro e barista. Atua em diferentes áreas das cervejarias Turatti e 5 Elementos, incluindo análise sensorial e treinamento de equipes e pontos de venda.",
+    topic: "Palestra conjunta com Yta de Castro sobre estratégia, posicionamento e experiência de marca.",
+  },
+
   {
     name: "Alexandre Magno",
     role: "CEO e fundador — Estilo DLT",
@@ -50,17 +60,7 @@ const speakers = [
     tag: "Branding & varejo",
     bio: "Empreendedor cearense e fundador da DLT, construiu uma marca de moda masculina com presença nacional a partir de uma trajetória marcada por decisões estratégicas, visão de mercado e conexão com o consumidor.",
     topic: "Por trás da marca: experiências, decisões e aprendizados na construção da DLT.",
-  },
-  {
-    name: "Felipe Costa Rodrigues",
-    role: "Sommelier de cervejas e técnico cervejeiro — Grupo Turatti",
-    image: "/images/Felipe.jpg",
-    asset: "felipe" as const,
-    tag: "Cervejaria & experiência",
-    bio: "Sommelier de cervejas, especialista em análise sensorial e off-flavor, juiz certificado, técnico cervejeiro e barista. Atua em diferentes áreas das cervejarias Turatti e 5 Elementos, incluindo análise sensorial e treinamento de equipes e pontos de venda.",
-    topic: "Palestra conjunta com Yta de Castro sobre estratégia, posicionamento e experiência de marca.",
-  },
-];
+  },];
 
 const schedule = [
   ["08h00", "Abertura oficial", "Boas-vindas e início da manhã de experiências."],
@@ -101,8 +101,8 @@ type MediaAssets = {
 
 const defaultAssets: MediaAssets = {
   logo: "/images/logo-fundo-escuro.png",
-  yta: "/images/Yta.jpg",
-  felipe: "/images/Felipe.jpg",
+  yta: "/images/yta.jpg",
+  felipe: "/images/felipe.jpg",
   alexandre: "/images/alexandre.jpg",
   natalia: "/images/natalia.jpg",
   board: "/images/painel-aplicacoes.png",

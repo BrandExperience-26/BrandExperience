@@ -36,7 +36,7 @@ const speakers = [
   {
     name: "Yta de Castro",
     role: "Head de Marketing — Grupo Turatti",
-    image: "/images/yta.jpg",
+    image: "/images/Yta.jpg",
     asset: "yta" as const,
     tag: "Marketing & branding",
     bio: "Jornalista e fotógrafa de formação, pós-graduada em Administração de Marca e Marketing Digital, tem mais de 15 anos de experiência em comunicação, marketing e branding. Estruturou áreas de marketing, liderou rebrands e lançamentos nos setores de gastronomia, entretenimento e cervejaria. Também atua como consultora.",
@@ -54,7 +54,7 @@ const speakers = [
   {
     name: "Felipe Costa Rodrigues",
     role: "Sommelier de cervejas e técnico cervejeiro — Grupo Turatti",
-    image: "/images/felipe.jpg",
+    image: "/images/Felipe.jpg",
     asset: "felipe" as const,
     tag: "Cervejaria & experiência",
     bio: "Sommelier de cervejas, especialista em análise sensorial e off-flavor, juiz certificado, técnico cervejeiro e barista. Atua em diferentes áreas das cervejarias Turatti e 5 Elementos, incluindo análise sensorial e treinamento de equipes e pontos de venda.",
@@ -101,8 +101,8 @@ type MediaAssets = {
 
 const defaultAssets: MediaAssets = {
   logo: "/images/logo-fundo-escuro.png",
-  yta: "/images/yta.jpg",
-  felipe: "/images/felipe.jpg",
+  yta: "/images/Yta.jpg",
+  felipe: "/images/Felipe.jpg",
   alexandre: "/images/alexandre.jpg",
   natalia: "/images/natalia.jpg",
   board: "/images/painel-aplicacoes.png",

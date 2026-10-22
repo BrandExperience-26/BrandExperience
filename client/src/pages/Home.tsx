@@ -43,6 +43,15 @@ const speakers = [
     topic: "Palestra conjunta com Felipe Costa Rodrigues sobre estratégia, posicionamento e experiência de marca.",
   },
   {
+    name: "Alexandre Magno",
+    role: "CEO e fundador — Estilo DLT",
+    image: "/images/alexandre.jpg",
+    asset: "alexandre" as const,
+    tag: "Branding & varejo",
+    bio: "Empreendedor cearense e fundador da DLT, construiu uma marca de moda masculina com presença nacional a partir de uma trajetória marcada por decisões estratégicas, visão de mercado e conexão com o consumidor.",
+    topic: "Por trás da marca: experiências, decisões e aprendizados na construção da DLT.",
+  },
+  {
     name: "Felipe Costa Rodrigues",
     role: "Sommelier de cervejas e técnico cervejeiro — Grupo Turatti",
     image: "/images/felipe.jpg",
@@ -57,8 +66,9 @@ const schedule = [
   ["08h00", "Abertura oficial", "Boas-vindas e início da manhã de experiências."],
   ["08h30", "Palestra — Natália Lima", "Como a experiência do cliente pode fortalecer marcas e criar conexões que permanecem."],
   ["09h10", "Palestra conjunta — Yta de Castro e Felipe Costa Rodrigues", "Marketing, posicionamento e experiência de marca no Grupo Turatti."],
-  ["10h10", "Mesa-redonda + perguntas", "Uma conversa com os palestrantes sobre branding, posicionamento, experiência e geração de valor."],
-  ["11h00", "Encerramento + foto oficial", "Agradecimentos e orientações sobre os certificados digitais."],
+  ["09h50", "Palestra — Alexandre Magno", "Por trás da marca: experiências, decisões e aprendizados na construção da DLT."],
+  ["10h30", "Mesa-redonda + perguntas", "Uma conversa com os palestrantes sobre branding, posicionamento, experiência e geração de valor."],
+  ["11h15", "Encerramento + foto oficial", "Agradecimentos e orientações sobre os certificados digitais."],
 ];
 
 const audience = [
@@ -84,6 +94,7 @@ type MediaAssets = {
   logo: string;
   yta: string;
   felipe: string;
+  alexandre: string;
   natalia: string;
   board: string;
 };
@@ -92,6 +103,7 @@ const defaultAssets: MediaAssets = {
   logo: "/images/logo-fundo-escuro.png",
   yta: "/images/yta.jpg",
   felipe: "/images/felipe.jpg",
+  alexandre: "/images/alexandre.jpg",
   natalia: "/images/natalia.jpg",
   board: "/images/painel-aplicacoes.png",
 };

@@ -18,7 +18,7 @@ import {
 import { ChangeEvent, useEffect, useState } from "react";
 
 const SYMPLA_URL = "https://www.sympla.com.br/evento/brand-experience-cdl/3576617";
-const INSTAGRAM_URL = "https://www.instagram.com/brandexperiencecdl/";
+const INSTAGRAM_URL = "https://www.instagram.com/brandexperience.oficial/";
 const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Faculdade+CDL%2C+Rua+Vinte+e+Cinco+de+Mar%C3%A7o%2C+780%2C+Fortaleza%2C+CE";
 const AMAR_AMANDO_URL = "https://amar-amando.netlify.app/#quem-somos";
 const CASA_MENINO_JESUS_URL = "https://www.casameninojesus.org.br";
